@@ -26,13 +26,22 @@ def escolha():
     if escolha_tipo == 1:
         anual()
 
+    elif escolha_tipo == 2:
+        mensal()
+
+def mensal():
+    titulo(texto='FATURAMENTO MENSAL')
+
 def anual():
     titulo(texto='FATURAMNETO ANUAL')
     quantidade_anos = int(input('quantos anos vc vai analizar: '))
     faturamentos = []
 
+    c = 0
+
     for i in range(1, quantidade_anos + 1):
-        faturamento = float(input('qual foi o faturamento anual: '))
+        c+=1
+        faturamento = float(input(f'qual foi o faturamento anual do {c}° ano: '))
         faturamentos.append(faturamento)
 
     soma = sum(faturamentos)
