@@ -32,6 +32,9 @@ def escolha():
     elif escolha_tipo == 3:
         pass
 
+    elif escolha_tipo == 4:
+        pass
+
 def semenal():
     titulo(texto='FATURAMENTO SEMANAL')
     quantidade_de_semanas = int(input('quantas semanas você vai analizar: '))
@@ -72,6 +75,11 @@ def anual():
     soma = sum(faturamentos)
     media = soma / quantidade_anos
     print(f'o faturamento de {quantidade_anos} anos foi {media} e o total foi {soma}')
+
+
+def fim():
+    titulo(texto='SAINDO DO PROGRAMA')
+    input('clique para sair do jogo')
 
 
 escolha()
