@@ -36,7 +36,7 @@ def escolha():
         fim()
 
     else:
-        escolha()
+        erro()
 
 def semenal():
     titulo(texto='FATURAMENTO SEMANAL')
