@@ -29,34 +29,44 @@ def escolha():
     elif escolha_tipo == 2:
         mensal()
 
-    elif escolha_tipo == 3
-    pass
+    elif escolha_tipo == 3:
+        pass
+
+def semenal():
+    titulo(texto='FATURAMENTO SEMANAL')
+    quantidade_de_semanas = int(input('quantas semanas você vai analizar: '))
+    faturamento = []
+
+    for i in range(1,quantidade_de_semanas +1):
+        faturamentos = float(input('qual o faturamento da {i}° semana: '))
+        faturamento.append(faturamentos)
+    soma = sum(faturamento)
+    media = soma / quantidade_de_semanas
+    print(f'o faturamento de {quantidade_de_semanas} semanas foi {media} e o total foi {soma}')
 
 def mensal():
     titulo(texto='FATURAMENTO MENSAL')
-    quantidade_de_mes = int(input('quanto meses você vai analizar: '))
+    quantidade_de_mes = int(input('quantos meses você vai analizar: '))
     faturamento = []
 
-    c=0
+
     for i in range(1, quantidade_de_mes + 1):
-        c+=1
-        faturamentos = float(input(f'Qual foi o faturamento mensal da empresas no {c}° mes: '))
+        faturamentos = float(input(f'Qual foi o faturamento mensal da empresas no {i}° mes: '))
         faturamento.append(faturamentos)
     soma = sum(faturamento)
     media = soma / quantidade_de_mes
 
-    print(f'o faturamento de {quantidade_de_mes} anos foi {media} e o total foi {soma}')
+    print(f'o faturamento de {quantidade_de_mes} meses foi {media} e o total foi {soma}')
 
 def anual():
     titulo(texto='FATURAMNETO ANUAL')
     quantidade_anos = int(input('quantos anos vc vai analizar: '))
     faturamentos = []
 
-    c = 0
+
 
     for i in range(1, quantidade_anos + 1):
-        c+=1
-        faturamento = float(input(f'qual foi o faturamento anual do {c}° ano: '))
+        faturamento = float(input(f'qual foi o faturamento anual do {i}° ano: '))
         faturamentos.append(faturamento)
 
     soma = sum(faturamentos)
