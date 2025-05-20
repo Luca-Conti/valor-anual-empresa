@@ -30,10 +30,13 @@ def escolha():
         mensal()
 
     elif escolha_tipo == 3:
-        pass
+        semenal
 
     elif escolha_tipo == 4:
-        pass
+        fim()
+
+    else:
+        escolha()
 
 def semenal():
     titulo(texto='FATURAMENTO SEMANAL')
@@ -77,9 +80,14 @@ def anual():
     print(f'o faturamento de {quantidade_anos} anos foi {media} e o total foi {soma}')
 
 
+def erro():
+    titulo(texto='Você digitou algo errado')
+    input('Digite algo para voltar para escolha: ')
+
+
 def fim():
     titulo(texto='SAINDO DO PROGRAMA')
-    input('clique para sair do jogo')
+    input('clique para sair do jogo: ')
 
 
 escolha()
