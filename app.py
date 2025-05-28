@@ -82,6 +82,14 @@ def semenal():
     sleep(0.5)
     print(Fore.GREEN + f'o faturamento de {quantidade_de_semanas} semanas foi {media} e o total foi {soma}' + Fore.RESET)
 
+    for i in range(1,4):
+        print(f'Preparando grafico em {i} segundos')
+        sleep(1)
+    Semanas = list(range(1, quantidade_de_semanas + 1))
+    escolha_grafico(tempo=Semanas, dinheiro=faturamentos,titulo='Grifico Semanal',  texto_de_baixo='Semanas', texto_lateral='Dinheiro')
+    input('Digite algo para voltar ao menu')
+    escolha()
+
 def mensal():
     
     '''Essa função é responsavel pelo faturamento mensal'''
