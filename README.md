@@ -1,36 +1,57 @@
-# Valor Anual Empresa
+# 📊 Programa de Faturamento
 
-Este projeto contém o arquivo `app.py`, responsável pelo cálculo e análise do valor anual de uma empresa.
+# Esse script ajuda você a analisar o faturamento anual, mensal ou semanal
+# Ele calcula soma e média e exibe gráficos usando matplotlib
 
-## Descrição
+# 📦 Requisitos:
+# - Python 3
+# - Bibliotecas:
+#   - matplotlib
+#   - colorama
 
-O `app.py` é um script Python que realiza operações para estimar o valor anual de uma empresa com base em dados financeiros fornecidos pelo usuário ou por arquivos de entrada.
+# Instale assim:
+# pip install matplotlib colorama
 
-## Funcionalidades
+# ------------------------
 
-- Entrada de dados financeiros anuais
-- Cálculo do valor anual da empresa
-- Geração de relatórios simples
+# Como usar:
+# 1. Execute o programa:
+#    python nome_do_arquivo.py
 
-## Como usar
+# 2. No menu, escolha:
+#    1 → Analize Anual
+#    2 → Analize Mensal
+#    3 → Analize Semanal
+#    4 → Sair
 
-1. Certifique-se de ter o Python instalado.
-2. Execute o script:
+# 3. Digite os valores de faturamento que ele pedir
 
-    ```bash
-    python app.py
-    ```
+# 4. Escolha o tipo de gráfico:
+#    1 → Gráfico de Barra
+#    2 → Gráfico de Linha
 
-3. Siga as instruções exibidas no terminal.
+# 5. Veja o resultado bonito na tela!
 
-## Requisitos
+# ------------------------
 
-- Python 3.x
+# Funções principais:
+# - anual() → Calcula faturamento anual
+# - mensal() → Calcula faturamento mensal
+# - semenal() → Calcula faturamento semanal
+# - escolha_grafico() → Mostra gráfico do jeito que você quiser
+# - erro() → Trata erros de entrada
+# - fim() → Finaliza o programa com mensagem bonitinha
 
-## Contribuição
+# ------------------------
 
-Sinta-se à vontade para abrir issues ou enviar pull requests.
+# 🛠 Melhorias futuras:
+# - Adicionar gráfico de pizza
+# - Permitir salvar gráficos como imagem
+# - Guardar histórico de dados
+# - Melhorar tratamento de erros
+# - Criar versão com interface gráfica
 
-## Licença
+# ------------------------
 
-Este projeto está licenciado sob a licença MIT.
+# Autor:
+# Esse script foi feito para ser simples, direto, visual e divertido!
