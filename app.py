@@ -186,7 +186,7 @@ def fim():
     """Essa função é chamada para sair do programa"""
     
     titulo(texto='SAINDO DO PROGRAMA')
-    input('clique para sair do jogo: ')
+    input('clique para sair do programa: ')
     sleep(4.5)
 
 
