@@ -153,6 +153,11 @@ def erro():
 
 
 def escolha_grafico(tempo = '', dinheiro = '',titulo = '', texto_de_baixo = '', texto_lateral = ''):
+
+    """
+    Função que o usuario escolho o tipo de grafico "talvez add grafico de pizza dps"
+    """
+
     try:
         escolha =  int(input('escolha 1 para grafico de barra \n e 2 para grafico de linha: '))
         if escolha == 1:
