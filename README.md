@@ -54,4 +54,4 @@
 # ------------------------
 
 # Autor:
-# Esse script foi feito para ser simples, direto, visual e divertido!
+# Esse script foi feito para ser simples, direto, visual e divertido! Cria por Luca Conti Email de contado "Lucagopro12@gmail.com"
