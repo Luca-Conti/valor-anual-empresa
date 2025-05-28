@@ -18,7 +18,9 @@ pip install matplotlib colorama
 
 ## Como usar:
 ## 1. Execute o programa:
-##    python nome_do_arquivo.py
+```
+    python nome_do_arquivo.py
+```
 
 ## 2. No menu, escolha:
 ##    1 → Analize Anual
