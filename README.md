@@ -10,7 +10,9 @@
 ##   - colorama
 
 ## Instale assim:
-## pip install matplotlib colorama
+```
+pip install matplotlib colorama
+```
 
 ## ------------------------
 
