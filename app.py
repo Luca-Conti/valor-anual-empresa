@@ -1,5 +1,6 @@
 from colorama import Fore, Style
 import os
+import matplotlib.pyplot as plt
 from time import sleep
 
 def titulo_sem_(texto=''):
@@ -41,7 +42,7 @@ def escolha():
         print('-----')
         print(Fore.RED +'Opção' + Fore.RESET)
         print('-----')
-        escolha_tipo = int(input('escolha 1 para anual e 2 para mensal e 3 para semanal e 4 para sair: '))
+        escolha_tipo = int(input('escolha 1 para anual \n e 2 para mensal \n e 3 para semanal \n e 4 para sair:  '))
 
         if escolha_tipo == 1:
             sleep(1)
@@ -115,9 +116,16 @@ def anual():
         faturamentos.append(faturamento)
 
     soma = sum(faturamentos)
+    anos = list(range(1, quantidade_anos + 1))
     media = soma / quantidade_anos
     sleep(0.5)
     print(Fore.GREEN + f'o faturamento de {quantidade_anos} anos foi {media} e o total foi {soma}' + Fore.RESET)
+    for i in range(1,4):
+        print(Fore.GREEN + f'Preparando grafico em {i} segundos' + Fore.RESET)
+        sleep(1)
+    escolha_grafico(tempo=anos,dinheiro=faturamentos)
+
+    escolha()
 
 
 def erro():
@@ -129,6 +137,21 @@ def erro():
     escolha()
 
 
+def escolha_grafico(tempo = '', dinheiro = ''):
+    try:
+        escolha =  int(input('escolha 1 para grafico de barra \n e 2 para grafico de linha: '))
+        if escolha == 1:
+            plt.bar(tempo, dinheiro)
+            plt.show()
+        elif escolha == 2:
+            plt.plot(tempo, dinheiro)
+            plt.show()
+        else:
+            erro()
+    except:
+        erro()
+    
+
 def fim():
 
     """Essa função é chamada para sair do programa"""
@@ -138,4 +161,5 @@ def fim():
     sleep(4.5)
 
 
-escolha()
+if __name__ == '__main__':
+    escolha()
