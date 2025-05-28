@@ -100,6 +100,13 @@ def mensal():
     sleep(0.5)
 
     print(Fore.GREEN + f'o faturamento de {quantidade_de_mes} meses foi {media} e o total foi {soma}' + Fore.RESET)
+    for i in range(1,4):
+        print(f'Preparando grafico em {i} segundos')
+        sleep(1)
+    meses = list(range(1, quantidade_de_mes + 1))
+    escolha_grafico(tempo=meses, dinheiro=faturamentos,titulo='Grifico Mensal',  texto_de_baixo='Meses', texto_lateral='Dinheiro')
+    input('Digite algo para voltar ao menu')
+    escolha()
 
 def anual():
     
@@ -121,10 +128,10 @@ def anual():
     sleep(0.5)
     print(Fore.GREEN + f'o faturamento de {quantidade_anos} anos foi {media} e o total foi {soma}' + Fore.RESET)
     for i in range(1,4):
-        print(Fore.GREEN + f'Preparando grafico em {i} segundos' + Fore.RESET)
+        print(f'Preparando grafico em {i} segundos')
         sleep(1)
-    escolha_grafico(tempo=anos,dinheiro=faturamentos)
-    input('Digite algo paravoltar ao menu')
+    escolha_grafico(tempo=anos,dinheiro=faturamentos,titulo='Grifico Anual', texto_de_baixo='Anos', texto_lateral='Dinheiro')
+    input('Digite algo para voltar ao menu')
     escolha()
 
 
