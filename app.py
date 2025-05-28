@@ -124,7 +124,7 @@ def anual():
         print(Fore.GREEN + f'Preparando grafico em {i} segundos' + Fore.RESET)
         sleep(1)
     escolha_grafico(tempo=anos,dinheiro=faturamentos)
-
+    input('Digite algo paravoltar ao menu')
     escolha()
 
 
@@ -137,14 +137,20 @@ def erro():
     escolha()
 
 
-def escolha_grafico(tempo = '', dinheiro = ''):
+def escolha_grafico(tempo = '', dinheiro = '',titulo = '', texto_de_baixo = '', texto_lateral = ''):
     try:
         escolha =  int(input('escolha 1 para grafico de barra \n e 2 para grafico de linha: '))
         if escolha == 1:
             plt.bar(tempo, dinheiro)
+            plt.xlabel(texto_de_baixo)
+            plt.ylabel(texto_lateral)
+            plt.title(titulo)
             plt.show()
         elif escolha == 2:
             plt.plot(tempo, dinheiro)
+            plt.xlabel(texto_de_baixo)
+            plt.ylabel(texto_lateral)
+            plt.title(titulo)
             plt.show()
         else:
             erro()
