@@ -88,6 +88,7 @@ def semenal():
     Semanas = list(range(1, quantidade_de_semanas + 1))
     escolha_grafico(tempo=Semanas, dinheiro=faturamentos,titulo='Grifico Semanal',  texto_de_baixo='Semanas', texto_lateral='Dinheiro')
     input('Digite algo para voltar ao menu')
+    os.system('cls')
     escolha()
 
 def mensal():
@@ -114,6 +115,7 @@ def mensal():
     meses = list(range(1, quantidade_de_mes + 1))
     escolha_grafico(tempo=meses, dinheiro=faturamentos,titulo='Grifico Mensal',  texto_de_baixo='Meses', texto_lateral='Dinheiro')
     input('Digite algo para voltar ao menu')
+    os.system('cls')
     escolha()
 
 def anual():
@@ -140,6 +142,7 @@ def anual():
         sleep(1)
     escolha_grafico(tempo=anos,dinheiro=faturamentos,titulo='Grifico Anual', texto_de_baixo='Anos', texto_lateral='Dinheiro')
     input('Digite algo para voltar ao menu')
+    os.system('cls')
     escolha()
 
 
