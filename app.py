@@ -112,8 +112,8 @@ def mensal():
     for i in range(1,4):
         print(f'Preparando grafico em {i} segundos')
         sleep(1)
-    meses = list(range(1, quantidade_de_mes + 1))
-    escolha_grafico(tempo=meses, dinheiro=faturamentos,titulo='Grifico Mensal',  texto_de_baixo='Meses', texto_lateral='Dinheiro')
+    meses = list(f'{i}° Mes' for i in range(1, quantidade_de_mes + 1))
+    escolha_grafico(tempo=meses, dinheiro=faturamento,titulo='Grifico Mensal',  texto_de_baixo='Meses', texto_lateral='Dinheiro', legenta='Meses')
     input('Digite algo para voltar ao menu')
     os.system('cls')
     escolha()
@@ -153,6 +153,7 @@ def erro():
     titulo(texto='Você digitou algo errado')
     input('Digite algo para voltar para escolha: ')
     escolha()
+    os.system('cls')
 
 
 def escolha_grafico(tempo = '', dinheiro = '',titulo = '', texto_de_baixo = '', texto_lateral = '', legenta=''):
