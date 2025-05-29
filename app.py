@@ -133,14 +133,14 @@ def anual():
         faturamentos.append(faturamento)
 
     soma = sum(faturamentos)
-    anos = list(range(1, quantidade_anos + 1))
+    anos = list(f'{i}° ano' for i in range(1, quantidade_anos + 1))
     media = soma / quantidade_anos
     sleep(0.5)
     print(Fore.GREEN + f'o faturamento de {quantidade_anos} anos foi {media} e o total foi {soma}' + Fore.RESET)
     for i in range(1,4):
         print(f'Preparando grafico em {i} segundos')
         sleep(1)
-    escolha_grafico(tempo=anos,dinheiro=faturamentos,titulo='Grifico Anual', texto_de_baixo='Anos', texto_lateral='Dinheiro')
+    escolha_grafico(tempo=anos,dinheiro=faturamentos,titulo='Grifico Anual', texto_de_baixo='Anos', texto_lateral='Dinheiro', legenta='Anos')
     input('Digite algo para voltar ao menu')
     os.system('cls')
     escolha()
@@ -155,14 +155,14 @@ def erro():
     escolha()
 
 
-def escolha_grafico(tempo = '', dinheiro = '',titulo = '', texto_de_baixo = '', texto_lateral = ''):
+def escolha_grafico(tempo = '', dinheiro = '',titulo = '', texto_de_baixo = '', texto_lateral = '', legenta=''):
 
     """
     Função que o usuario escolho o tipo de grafico "talvez add grafico de pizza dps"
     """
 
     try:
-        escolhas =  int(input('escolha 1 para grafico de barra \n e 2 para grafico de linha \n e 3 para não ter grafico: '))
+        escolhas =  int(input('escolha 1 para grafico de barra \n e 2 para grafico de linha \n e 3 para grafico de pizza: '))
         if escolhas == 1:
             plt.bar(tempo, dinheiro)
             plt.xlabel(texto_de_baixo)
@@ -176,6 +176,11 @@ def escolha_grafico(tempo = '', dinheiro = '',titulo = '', texto_de_baixo = '', 
             plt.title(titulo)
             plt.show()
         elif escolhas == 3:
+            plt.pie(dinheiro,labels=tempo,autopct='%1.1f%%', startangle=90, shadow=True)
+            plt.title(titulo)
+            plt.legend(title=legenta, loc=3)
+            plt.show()
+        elif escolhas == 4:
             os.system('cls')
             escolha()
         else:
