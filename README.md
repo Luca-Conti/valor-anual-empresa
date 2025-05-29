@@ -25,7 +25,7 @@ pip install matplotlib colorama
 ## 2. No menu, escolha:
 ##    1 → Analize Anual
 ##    2 → Analize Mensal
-##   3 → Analize Semanal
+##    3 → Analize Semanal
 ##    4 → Sair
 
 ## 3. Digite os valores de faturamento que ele pedir
@@ -33,6 +33,7 @@ pip install matplotlib colorama
 ## 4. Escolha o tipo de gráfico:
 ##    1 → Gráfico de Barra
 ##    2 → Gráfico de Linha
+##    3 → Gráfico de Pizza
 
 ## 5. Veja o resultado bonito na tela!
 
@@ -49,8 +50,6 @@ pip install matplotlib colorama
 ## ------------------------
 
 ## 🛠 Melhorias futuras:
-## - Adicionar gráfico de pizza
-## - Permitir salvar gráficos como imagem
 ## - Guardar histórico de dados
 ## - Melhorar tratamento de erros
 ## - Criar versão com interface gráfica
