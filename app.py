@@ -54,7 +54,7 @@ def escolha():
 
         elif escolha_tipo == 3:
             sleep(1)
-            semenal
+            semenal()
 
         elif escolha_tipo == 4:
             sleep(1)
@@ -162,19 +162,22 @@ def escolha_grafico(tempo = '', dinheiro = '',titulo = '', texto_de_baixo = '', 
     """
 
     try:
-        escolha =  int(input('escolha 1 para grafico de barra \n e 2 para grafico de linha: '))
-        if escolha == 1:
+        escolhas =  int(input('escolha 1 para grafico de barra \n e 2 para grafico de linha \n e 3 para não ter grafico: '))
+        if escolhas == 1:
             plt.bar(tempo, dinheiro)
             plt.xlabel(texto_de_baixo)
             plt.ylabel(texto_lateral)
             plt.title(titulo)
             plt.show()
-        elif escolha == 2:
+        elif escolhas == 2:
             plt.plot(tempo, dinheiro)
             plt.xlabel(texto_de_baixo)
             plt.ylabel(texto_lateral)
             plt.title(titulo)
             plt.show()
+        elif escolhas == 3:
+            os.system('cls')
+            escolha()
         else:
             erro()
     except:
