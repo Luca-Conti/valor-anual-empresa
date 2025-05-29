@@ -75,7 +75,7 @@ def semenal():
     faturamento = []
 
     for i in range(1,quantidade_de_semanas +1):
-        faturamentos = float(input('qual o faturamento da {i}° semana: '))
+        faturamentos = float(input(f'qual o faturamento da {i}° semana: '))
         faturamento.append(faturamentos)
     soma = sum(faturamento)
     media = soma / quantidade_de_semanas
@@ -85,8 +85,8 @@ def semenal():
     for i in range(1,4):
         print(f'Preparando grafico em {i} segundos')
         sleep(1)
-    Semanas = list(range(1, quantidade_de_semanas + 1))
-    escolha_grafico(tempo=Semanas, dinheiro=faturamentos,titulo='Grifico Semanal',  texto_de_baixo='Semanas', texto_lateral='Dinheiro')
+    Semanas = list(f'{i}° Semana' for i in range(1, quantidade_de_semanas + 1))
+    escolha_grafico(tempo=Semanas, dinheiro=faturamento,titulo='Grifico Semanal',  texto_de_baixo='Semanas', texto_lateral='Dinheiro', legenta='Semanas')
     input('Digite algo para voltar ao menu')
     os.system('cls')
     escolha()
