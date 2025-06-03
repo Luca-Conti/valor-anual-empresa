@@ -159,11 +159,11 @@ def erro():
 def escolha_grafico(tempo = '', dinheiro = '',titulo = '', texto_de_baixo = '', texto_lateral = '', legenta=''):
 
     """
-    Função que o usuario escolho o tipo de grafico "talvez add grafico de pizza dps"
+    Função que o usuario escolho o tipo de grafico
     """
 
     try:
-        escolhas =  int(input('escolha 1 para grafico de barra \n e 2 para grafico de linha \n e 3 para grafico de pizza: '))
+        escolhas =  int(input('escolha 1 para grafico de barra \n e 2 para grafico de linha \n e 3 para grafico de pizza \n e 4 para não ter grafico: '))
         if escolhas == 1:
             plt.bar(tempo, dinheiro)
             plt.xlabel(texto_de_baixo)
