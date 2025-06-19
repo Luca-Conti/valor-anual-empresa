@@ -2,6 +2,11 @@ from colorama import Fore, Style
 import os
 import matplotlib.pyplot as plt
 from time import sleep
+from elevenlabs.client import ElevenLabs
+from elevenlabs import save,play
+from playsound import playsound
+
+client = ElevenLabs(api_key="sk_bddff18b4d7f0d9f2291a19b0861db84f5bf5c3780943699")
 
 def titulo_sem_(texto=''):
     """
@@ -189,6 +194,15 @@ def escolha_grafico(tempo = '', dinheiro = '',titulo = '', texto_de_baixo = '', 
     except:
         erro()
     
+def audio(text = ''):
+    audio = client.text_to_speech.convert(
+    voice_id="CZD4BJ803C6T0alQxsR7",  # Exemplo: Andreia I.
+    text=text,
+    output_format="mp3_44100" )
+
+    os.makedirs("audios", exist_ok=True)
+    save(audio, r'audios\teste.mp3')
+    playsound(r"audios\teste.mp3")
 
 def fim():
 
